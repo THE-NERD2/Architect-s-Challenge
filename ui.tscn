@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://drlhfve06o25o"]
+
+[ext_resource type="Script" path="res://LevelSelection.gd" id="1_y5vc4"]
+[ext_resource type="Script" path="res://SelectableLevel.gd" id="1_ygdjf"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FlowContainer" type="FlowContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Levels" type="HBoxContainer" parent="FlowContainer"]
+layout_mode = 2
+script = ExtResource("1_y5vc4")
+
+[node name="Level1" type="AspectRatioContainer" parent="FlowContainer/Levels"]
+layout_mode = 2
+script = ExtResource("1_ygdjf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FlowContainer/Levels/Level1"]
+custom_minimum_size = Vector2(200, 2.08165e-12)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="FlowContainer/Levels/Level1/VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+text = "Level 1"
+
+[node name="TextureRect" type="TextureRect" parent="FlowContainer/Levels/Level1/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="FlowContainer/Levels/Level1"]
+visible = false
+custom_minimum_size = Vector2(200, 220)
+layout_mode = 2
+color = Color(0, 0.827451, 1, 0.462745)
+
+[node name="Level2" type="AspectRatioContainer" parent="FlowContainer/Levels"]
+layout_mode = 2
+script = ExtResource("1_ygdjf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FlowContainer/Levels/Level2"]
+custom_minimum_size = Vector2(200, 2.08165e-12)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="FlowContainer/Levels/Level2/VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+text = "Level 2"
+
+[node name="TextureRect" type="TextureRect" parent="FlowContainer/Levels/Level2/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="FlowContainer/Levels/Level2"]
+visible = false
+custom_minimum_size = Vector2(200, 220)
+layout_mode = 2
+color = Color(0, 0.827451, 1, 0.462745)
+
+[node name="StartButton" type="Button" parent="FlowContainer"]
+layout_mode = 2
+text = "Start"

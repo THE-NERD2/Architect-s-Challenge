@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Architect's Challenge"
+run/main_scene="res://ui.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
